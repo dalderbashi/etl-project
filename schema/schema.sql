@@ -24,7 +24,7 @@ CREATE TABLE soybean_transformed(
 
 CREATE TABLE crude_oil_transformed(
 	Date DATE NOT NULL,
-	Crude_open_Price FLOAT NOT NULL,
+	Crude_Open_Price FLOAT NOT NULL,
 	Crude_Avg_Price FLOAT NOT NULL,
 	PRIMARY KEY (Date)
 );		
