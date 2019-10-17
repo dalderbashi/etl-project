@@ -26,32 +26,26 @@ import datetime as dt
 import glob
 import numpy as np
 
-
-illinois_df = pd.concat(map(pd.read_csv, glob.glob("../../input/illinois/*.csv")))
-illinois_df.count()
-
+illinois_df = pd.concat(map(pd.read_csv, glob.glob("./input/illinois/*.csv")))
+#illinois_df.count()
 
 illinois_df = illinois_df[(~np.isnan(illinois_df.TOBS)) & (~np.isnan(illinois_df.PRCP))]
 
 
+#print(len(illinois_df))
 
-print(len(illinois_df))
+#illinois_df.head()
 
-
-
-illinois_df.head()
-
-
-illinois_df.tail()
+#illinois_df.tail()
 
 
 # What are the data types in the DataFrame
-illinois_df.dtypes
+#illinois_df.dtypes
 
 
 ## Convert "Date" from a string to a date-time-group variable
 illinois_df["DATE"] =  pd.to_datetime(illinois_df["DATE"])
-illinois_df.dtypes
+#illinois_df.dtypes
 
 
 
@@ -59,15 +53,15 @@ illinois_df.dtypes
 illinois_df = illinois_df.rename(columns={"DATE": "Date",
                                                           "PRCP": "Illinois_Precip",
                                                           "TOBS": "Illinois_Temp"})
-illinois_df.head()
+#illinois_df.head()
 
 
 illinois_transformed = illinois_df.groupby(['Date']).mean()
-illinois_transformed
+#illinois_transformed
 
 
-print(len(illinois_transformed))
+#print(len(illinois_transformed))
 
 
-illinois_transformed.to_csv("../../output/illinois_transformed.csv")
+illinois_transformed.to_csv("./output/illinois_transformed.csv")
 

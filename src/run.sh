@@ -1,4 +1,7 @@
-python download.py
-python transforms/movies.py
-python transforms/review.py
-python load.py
+cd "$(dirname "$0")"
+cd ..
+python ./src/transforms/crudeoil.py
+python ./src/transforms/soybeans.py
+python ./src/transforms/iowa.py
+python ./src/transforms/illinois.py
+python ./src/load.py

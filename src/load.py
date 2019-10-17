@@ -23,9 +23,8 @@ iowa_df = pd.read_csv(iowa_file)
 illinois_df = pd.read_csv(illinois_file)
 
 
-soybean_df.to_sql(name='soybean_transformed', con=engine, if_exists='append', index=False)
-crude_oil_df.to_sql(name='crude_oil_transformed', con=engine, if_exists='append', index=False)
-iowa_df.to_sql(name='iowa_transformed', con=engine, if_exists='append', index=False)
-illinois_df.to_sql(name='illinois_transformed', con=engine, if_exists='append', index=False)
+soybean_df.to_sql(name='soybean', con=engine, if_exists='append', index=False)
+crude_oil_df.to_sql(name='crude_oil', con=engine, if_exists='append', index=False)
+iowa_df.to_sql(name='iowa', con=engine, if_exists='append', index=False)
+illinois_df.to_sql(name='illinois', con=engine, if_exists='append', index=False)
 
-print(soybean_df.head())
