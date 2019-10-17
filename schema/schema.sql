@@ -29,11 +29,4 @@ CREATE TABLE crude_oil_transformed(
 	PRIMARY KEY (Date)
 );		
 
-
-CREATE TABLE crude_oil_transformed(
-	Date DATE NOT NULL,
-	crude_open_price FLOAT() NOT NULL,
-	crudeoil_avg_price FLOAT() NOT NULL,
-	PRIMARY KEY (Date)
-);	
 	
