@@ -30,11 +30,11 @@ iowa_df = iowa_df[(~np.isnan(iowa_df.TOBS)) & (~np.isnan(iowa_df.PRCP))]
 iowa_df["DATE"] =  pd.to_datetime(iowa_df["DATE"])
 #iowa_df.dtypes
 # Rename the column headers
-iowa_df = iowa_df.rename(columns={"DATE": "Date",
-                                                          "PRCP": "Iowa_Precip",
-                                                          "TOBS": "Iowa_Temp"})
+iowa_df = iowa_df.rename(columns={"DATE": "date",
+                                                          "PRCP": "iowa_precip",
+                                                          "TOBS": "iowa_temp"})
 #iowa_df.head()
-iowa_transformed = iowa_df.groupby(['Date']).mean()
+iowa_transformed = iowa_df.groupby(['date']).mean()
 #iowa_transformed.head()
 iowa_transformed.to_csv("./output/iowa_transformed.csv")
 

@@ -37,11 +37,12 @@ crudeoil_transformed= crudeoil_df[crudeoil_cols].copy()
 
 
 # Rename the column headers
-crudeoil_transformed = crudeoil_transformed.rename(columns={"Open": "Crude_Open_Price"})
+crudeoil_transformed = crudeoil_transformed.rename(columns={"Open": "crude_open_price", "Date":"date",
+ "Crude_Avg_Price":"crude_avg_price"})
 #crudeoil_transformed.head()
 
 #format crudeoil_avg_price to two decimal place
-crudeoil_transformed=crudeoil_transformed.round({'Crude_Avg_Price': 2})
+crudeoil_transformed=crudeoil_transformed.round({'crude_avg_price': 2})
 #crudeoil_transformed.head()
 
 

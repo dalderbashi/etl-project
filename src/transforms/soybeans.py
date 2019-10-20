@@ -34,9 +34,9 @@ soybean_cols = ["Date", "Open", "soybean_avg_price"]
 soybean_transformed = soybean_df[soybean_cols].copy()
 
 # Rename the column headers
-soybean_transformed = soybean_transformed.rename(columns = {
-    "Open": "Soybean_Open_Price",
-    "soybean_avg_price": "Soybean_Avg_Price"
+soybean_transformed = soybean_transformed.rename(columns = {"Date":"date",
+    "Open": "soybean_open_price",
+    "soybean_avg_price": "soybean_avg_price"
 })
 #soybean_transformed.count()
 #soybean_transformed.head()

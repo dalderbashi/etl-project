@@ -50,13 +50,13 @@ illinois_df["DATE"] =  pd.to_datetime(illinois_df["DATE"])
 
 
 # Rename the column headers
-illinois_df = illinois_df.rename(columns={"DATE": "Date",
-                                                          "PRCP": "Illinois_Precip",
-                                                          "TOBS": "Illinois_Temp"})
+illinois_df = illinois_df.rename(columns={"DATE": "date",
+                                                          "PRCP": "illinois_precip",
+                                                          "TOBS": "illinois_temp"})
 #illinois_df.head()
 
 
-illinois_transformed = illinois_df.groupby(['Date']).mean()
+illinois_transformed = illinois_df.groupby(['date']).mean()
 #illinois_transformed
 
 
